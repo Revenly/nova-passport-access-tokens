@@ -1,0 +1,40 @@
+{
+    "name": "64robots/nova-passport-access-tokens",
+    "description": "Create passport access tokens for users",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "lacasera",
+            "email": "aboateng62@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "R64\\NovaPassportAccessTokens\\": "src/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "R64\\NovaPassportAccessTokens\\Providers\\NovaPassportAccessTokenServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "laravel/framework": "^8.0",
+        "laravel/nova": "^3.9",
+        "laravel/passport": "^10.0"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
