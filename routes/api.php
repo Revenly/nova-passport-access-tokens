@@ -18,10 +18,3 @@ Route::get('/users', '\R64\NovaPassportAccessTokens\Http\Controllers\UserControl
 Route::post('/token', '\R64\NovaPassportAccessTokens\Http\Controllers\TokenController@create');
 Route::get('/tokens', '\R64\NovaPassportAccessTokens\Http\Controllers\TokenController@list');
 Route::delete('/token/{token_id}', '\R64\NovaPassportAccessTokens\Http\Controllers\TokenController@destroy');
-
-
-//<div
-//                            v-show="tokenFieldHasError('scopes')"
-//                            class="help-text error-text mt-2 text-danger"
-//                            v-text="tokenFieldError('scopes')"
-//                                ></div>
