@@ -41,7 +41,7 @@ class TokenController
 
     public function list()
     {
-        $tokens =  Passport::token()->all();
+        $tokens =  Passport::token()->forNova()->get();
 
         return $tokens->load('client')->filter(function ($token) {
             return $token->client->personal_access_client && ! $token->revoked;
