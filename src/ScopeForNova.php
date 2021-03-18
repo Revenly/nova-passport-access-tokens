@@ -4,5 +4,5 @@ namespace R64\NovaPassportAccessTokens;
 
 interface ScopeForNova
 {
-    public function scopeForNova();
+    public function scopeForNova($query);
 }
