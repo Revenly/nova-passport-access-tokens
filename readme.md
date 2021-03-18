@@ -23,6 +23,24 @@ Manage Laravel Passport personal access tokens.
     }
    ```
 
+3. Implement `R64\NovaPassportAccessTokens\NovaIssuableToken` in your `App\Models\Users`
+
+```php
+namespace App\Models\User;
+use Illuminate\Database\Eloquent\Collection;
+
+
+class User extends Authenticatable implements NovaIssuableToken
+{
+
+    public static function getForNova(): Collection 
+    {
+        //
+    }
+
+}
+```
+
 ## Usage
 ### Nova Tools
 #### Passport Management
