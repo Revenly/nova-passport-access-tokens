@@ -1,16 +1,13 @@
 <?php
 namespace  R64\NovaPassportAccessTokens\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Routing\Controller;
 
 class UserController extends Controller
 {
     public function list()
     {
-        $users = \App\Models\User::query()
-            ->select(['email', 'first_name', 'last_name'])
-            ->get();
-
-        return response()->json(compact('users'), 200);
+        return response()->json(['users' => User::getForNova()->all()], 200);
     }
 }
