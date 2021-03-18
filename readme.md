@@ -41,6 +41,39 @@ class User extends Authenticatable implements NovaIssuableToken
 }
 ```
 
+4. Implement `R64\NovaPassportAccessTokens\ScopeForNova` in your `App\Models\Token`
+
+```php
+namespace App\Models\Token;
+use R64\NovaPassportAccessTokens\ScopeForNova;
+
+class Token extends \Laravel\Passport\Token implements ScopeForNova
+{
+    public function scopeForNova($query)
+    {
+        //
+    }
+}
+```
+
+5. Use `App\Models\Token` in `AppServiceProvider`
+
+```php
+namespace App\Providers;
+
+use App\Models\Token;
+use Illuminate\Support\ServiceProvider;
+use Laravel\Passport\Passport;
+
+class AppServiceProvider extends ServiceProvider
+{
+    public function boot()
+    {
+        Passport::useTokenModel(Token::class);
+    }
+}
+```
+
 ## Usage
 ### Nova Tools
 #### Passport Management
