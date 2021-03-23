@@ -1,8 +1,7 @@
 <template>
   <div>
-    <h1>Passport Manager</h1>
+    <h1>Access Tokens</h1>
 
-    <h2 class="mt-8 text-90 font-normal text-2xl">Access Tokens</h2>
     <div v-show="accessToken.length == 0" class="card mt-3">
       <div class="flex border-b border-40">
         <div class="w-1/5 py-6 px-8">
