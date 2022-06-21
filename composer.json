@@ -1,5 +1,5 @@
 {
-    "name": "64robots/nova-passport-access-tokens",
+    "name": "revenly/nova-passport-access-tokens",
     "description": "Create passport access tokens for users",
     "type": "library",
     "license": "MIT",
@@ -28,7 +28,8 @@
         }
     },
     "require": {
-        "laravel/framework": "^8.0",
+        "php": "^7.4|^8.0|^8.1",
+        "laravel/framework": "^8.0|^9.0",
         "laravel/nova": "^3.9",
         "laravel/passport": "^10.0"
     },
