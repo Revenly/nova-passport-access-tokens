@@ -43,15 +43,12 @@ class TokenController
     {
         $tokens =  Passport::token()->forNova()->get();
 
-        return $tokens->load('client')->filter(function ($token) {
-            return $token->client->personal_access_client && ! $token->revoked;
-        })->values();
+        return $tokens->load('client')->filter(fn($token) => $token->client->personal_access_client && ! $token->revoked)->values();
     }
 
     /**
      * Delete the given token.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @param  string  $tokenId
      * @return \Illuminate\Http\Response
      */
